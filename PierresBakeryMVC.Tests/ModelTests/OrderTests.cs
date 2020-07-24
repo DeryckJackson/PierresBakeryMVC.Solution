@@ -41,5 +41,15 @@ namespace PierresBakeryMVC.Tests
 
       Assert.AreEqual(price, result);
     }
+
+    [TestMethod]
+    public void GetDate_ReturnsDate_String()
+    {
+      string date = "7/24/2020";
+      Order newOrder = new Order("title", "desc", 5, date);
+      string result = "";
+
+      Assert.AreEqual(date, result);
+    }
   }
 }
