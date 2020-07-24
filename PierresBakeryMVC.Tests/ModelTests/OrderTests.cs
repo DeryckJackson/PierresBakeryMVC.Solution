@@ -37,7 +37,7 @@ namespace PierresBakeryMVC.Tests
     {
       int price = 5;
       Order newOrder = new Order("title", "desc", price, "date");
-      int result = 0;
+      int result = newOrder.Price;
 
       Assert.AreEqual(price, result);
     }
