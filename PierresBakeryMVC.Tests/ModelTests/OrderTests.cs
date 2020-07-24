@@ -22,6 +22,14 @@ namespace PierresBakeryMVC.Tests
     }
     
 
-    
+    [TestMethod]
+    public void GetTitle_ReturnsTitle_String()
+    {
+      string title = "Test Title";
+      Order newOrder = new Order(title, "desc", 5, "date");
+      string result = "";
+
+      Assert.AreEqual(title, result);
+    }
   }
 }
