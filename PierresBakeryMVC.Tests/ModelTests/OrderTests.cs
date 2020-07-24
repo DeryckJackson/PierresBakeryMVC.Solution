@@ -47,9 +47,19 @@ namespace PierresBakeryMVC.Tests
     {
       string date = "7/24/2020";
       Order newOrder = new Order("title", "desc", 5, date);
-      string result = "";
+      string result = newOrder.Date;
 
       Assert.AreEqual(date, result);
+    }
+
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      Order newOrder = new Order("title", "desc", 5, "date");
+
+      int result = 1;
+
+      Assert.AreEqual(0, result);
     }
   }
 }
