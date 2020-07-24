@@ -61,5 +61,17 @@ namespace PierresBakeryMVC.Tests
 
       Assert.AreEqual(0, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      Order newOrder1 = new Order("title", "desc", 5, "date");
+      Order newOrder2 = new Order("title", "desc", 5, "date");
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      List<Order> result = new List<Order>();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
