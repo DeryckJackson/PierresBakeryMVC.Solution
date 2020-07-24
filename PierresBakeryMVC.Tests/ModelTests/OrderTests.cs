@@ -31,5 +31,15 @@ namespace PierresBakeryMVC.Tests
 
       Assert.AreEqual(title, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPrice_Int()
+    {
+      int price = 5;
+      Order newOrder = new Order("title", "desc", price, "date");
+      int result = 0;
+
+      Assert.AreEqual(price, result);
+    }
   }
 }
