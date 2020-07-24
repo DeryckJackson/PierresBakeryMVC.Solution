@@ -80,7 +80,7 @@ namespace PierresBakeryMVC.Tests
       Order newOrder1 = new Order("title1", "desc1", 5, "date");
       Order newOrder2 = new Order("title", "desc", 5, "date");
 
-      Order result = new Order("title2", "desc2", 5, "date");;
+      Order result = Order.Find(1);
 
       Assert.AreEqual(newOrder2, result);
     }
