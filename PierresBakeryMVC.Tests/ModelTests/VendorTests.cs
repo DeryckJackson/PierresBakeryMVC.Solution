@@ -6,15 +6,19 @@ using System;
 namespace PierresBakeryMVC.Tests
 {
   [TestClass]
-  public class VendorTest : IDisposable
+  public class VendorTest 
   {
 
-    public void Dispose()
-    {
-      Category.ClearAll();
-    }
+    // public void Dispose()
+    // {
+    //   Category.ClearAll();
+    // }
 
     [TestMethod]
-    
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("test category");
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
   }
 }

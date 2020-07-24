@@ -1,20 +1,20 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using PierresBakeryMVC.Models;
-using System;
+// using Microsoft.VisualStudio.TestTools.UnitTesting;
+// using System.Collections.Generic;
+// using PierresBakeryMVC.Models;
+// using System;
 
-namespace PierresBakeryMVC.Tests
-{
-  [TestClass]
-  public class OrderTest : IDisposable
-  {
+// namespace PierresBakeryMVC.Tests
+// {
+//   [TestClass]
+//   public class OrderTest : IDisposable
+//   {
 
-    public void Dispose()
-    {
-      Item.ClearAll();
-    }
+//     public void Dispose()
+//     {
+//       Item.ClearAll();
+//     }
 
-    [TestMethod]
+//     [TestMethod]
     
-  }
-}
+//   }
+// }
