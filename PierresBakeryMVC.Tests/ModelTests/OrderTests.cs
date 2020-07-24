@@ -69,7 +69,7 @@ namespace PierresBakeryMVC.Tests
       Order newOrder2 = new Order("title", "desc", 5, "date");
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
-      List<Order> result = new List<Order>();
+      List<Order> result = Order.GetAll();
 
       CollectionAssert.AreEqual(newList, result);
     }
