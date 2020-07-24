@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1 class="jumbotron">Add a Vendor</h1>
+
+<p>Add a vendor here:</p>
+<form action="/vendors" method="post">
+  <label for="vendorName">Vendor Name:</label>
+  <input id="vendorName" name="vendorName" type="text">
+  <label for="desc">Description:</label>
+  <input id="desc" name="desc" type="text">
+  <button type="submit">Add</button>
+</form>
+
+<p><a href="/">Back home</a></p>
+<p><a href="/vendors">Back to vendor list.</a></p>
