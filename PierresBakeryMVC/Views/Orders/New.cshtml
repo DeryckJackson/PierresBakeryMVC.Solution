@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1 class="jumbotron">Add an Order</h1>
+
+<p>Add an order here:</p>
+<form action="/vendors/@Model.Id/orders" method="post">
+  <label for="title">Title:</label>
+  <input id="title" name="title" type="text">
+  <label for="desc">Description:</label>
+  <input id="desc" name="desc" type="text">
+  <label for="price">Price:</label>
+  <input id="price" name="price" type="number">
+  <label for="date">Date:</label>
+  <input id="date" name="date" type="date" value="2020-07-24">
+  <button type="submit">Add</button>
+</form>
+
+<p><a href="/">Back home</a></p>
+<p><a href="/vendors">Back to vendor list.</a></p>

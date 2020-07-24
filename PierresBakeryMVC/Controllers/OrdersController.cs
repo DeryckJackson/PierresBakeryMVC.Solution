@@ -4,8 +4,13 @@ using System.Collections.Generic;
 
 namespace PierresBakeryMVC.Controllers
 {
-  public class ItemsController : Controller
+  public class OrdersController : Controller
   {
-    
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
+    {
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
+    }
   }
 }
