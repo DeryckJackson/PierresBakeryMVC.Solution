@@ -36,7 +36,7 @@ namespace PierresBakeryMVC.Tests
     {
       string desc = "Test Desc";
       Vendor newVendor = new Vendor("name", desc);
-      string result = "desc";
+      string result = newVendor.Desc;
 
       Assert.AreEqual(desc, result);
     }
