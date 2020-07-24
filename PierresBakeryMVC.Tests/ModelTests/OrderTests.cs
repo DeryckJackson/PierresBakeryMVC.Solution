@@ -27,7 +27,7 @@ namespace PierresBakeryMVC.Tests
     {
       string title = "Test Title";
       Order newOrder = new Order(title, "desc", 5, "date");
-      string result = "";
+      string result = newOrder.Title;
 
       Assert.AreEqual(title, result);
     }
