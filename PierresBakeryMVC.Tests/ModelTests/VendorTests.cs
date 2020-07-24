@@ -66,10 +66,10 @@ namespace PierresBakeryMVC.Tests
       Assert.AreEqual(newVendor2, result);
     }
 
-  //   [TestMethod]
-  //   public void AddOrder_AddsOrderToVendor_Orders()
-  //   {
-  //     Order newOrder = new Order()
-  //   }
+    [TestMethod]
+    public void AddOrder_AddsOrderToVendor_Orders()
+    {
+      Order newOrder = new Order("title", "desc", 5, "date");
+    }
   }
 }
