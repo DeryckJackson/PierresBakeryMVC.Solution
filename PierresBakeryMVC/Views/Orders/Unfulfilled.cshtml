@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierresBakeryMVC.Models;
+
+<h1 class="jumbotron">Unfulfilled Orders</h1>
+
+@if (Model.Count == 0)
+{
+  <p>There are no unfulfilled orders.</p>
+}
+
+<ul>
+  <form action="/orders/fulfilled" method="post">
+    @foreach (Order order in Model)
+    {
+      <li>Title: <label>@order.Title</label></li>
+      <li>Description: @order.Desc</li>
+      <li>Price: $@order.Price.ToString()</li>
+      <li>Date: @order.Date</li>
+      <li>Set as filled: <input type="checkbox" name="orderIds" value="@order.Id"></li>
+
+    }
+    <button type="submit">Submit</button>
+  </form>
+</ul>

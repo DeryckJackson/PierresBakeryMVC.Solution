@@ -23,5 +23,22 @@ namespace PierresBakeryMVC.Controllers
       model.Add("vendor", vendor);
       return View(model);
     }
+
+    [HttpGet("/orders/unfulfilled")]
+    public ActionResult Unfulfilled()
+    {
+      List<Order> unfulfilledOrders = Order.GetUnfulfilledOrders();
+      return View(unfulfilledOrders);
+    }
+
+    [HttpPost("/orders/fulfilled")]
+    public ActionResult Fulfilled(int[] orderIds)
+    {
+      foreach (int id in orderIds)
+      {
+        Order.SetFulfilledTrueById(id);
+      }
+      return Redirect("/Vendors");
+    }
   }
 }

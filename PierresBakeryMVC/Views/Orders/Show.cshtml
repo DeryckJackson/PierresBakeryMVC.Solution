@@ -8,6 +8,15 @@
 <h3>Description: @Model["order"].Desc</h3>
 <h3>Price: $@Model["order"].Price</h3>
 <h3>Date: @Model["order"].Date</h3>
+<@if (Model["order"].Fulfilled)
+{
+  <h3>Fulfilled: Yes</h3>
+}
+else
+{
+  <h3>Fulfilled: No</h3>
+}
+
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
 <a href='/vendors'>View all vendors</a>

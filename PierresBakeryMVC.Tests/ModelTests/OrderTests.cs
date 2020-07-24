@@ -56,7 +56,7 @@ namespace PierresBakeryMVC.Tests
     public void GetFulfilled_ReturnsFulfilled_Boolean()
     {
       Order newOrder = new Order("title", "desc", 5, "date");
-      Boolean result = newOrder.Fulfilled;
+      bool result = newOrder.Fulfilled;
 
       Assert.AreEqual(false, result);
     }

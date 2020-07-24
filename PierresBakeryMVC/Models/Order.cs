@@ -37,5 +37,23 @@ namespace PierresBakeryMVC.Models
     {
       return _instances[id];
     }
+
+    public static List<Order> GetUnfulfilledOrders()
+    {
+      List<Order> outputList = new List<Order>();
+      foreach (Order order in _instances)
+      {
+        if (!order.Fulfilled)
+        {
+          outputList.Add(order);
+        }
+      }
+      return outputList;
+    }
+
+    public static void SetFulfilledTrueById(int id)
+    {
+      _instances[id].Fulfilled = true;
+    }
   }
 }
