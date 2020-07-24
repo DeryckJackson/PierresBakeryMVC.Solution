@@ -48,6 +48,7 @@ No bugs
 ## Tech used
 
 * C#
+* ASP.NET MVC
 
 ### License
 

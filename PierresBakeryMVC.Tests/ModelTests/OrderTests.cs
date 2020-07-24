@@ -53,6 +53,15 @@ namespace PierresBakeryMVC.Tests
     }
 
     [TestMethod]
+    public void GetFulfilled_ReturnsFulfilled_Boolean()
+    {
+      Order newOrder = new Order("title", "desc", 5, "date");
+      Boolean result = true;
+
+      Assert.AreEqual(false, result);
+    }
+
+    [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       Order newOrder = new Order("title", "desc", 5, "date");
