@@ -20,5 +20,8 @@ namespace PierresBakeryMVC.Tests
       Order newOrder = new Order("title", "desc", 5, "date");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+    
+
+    
   }
 }

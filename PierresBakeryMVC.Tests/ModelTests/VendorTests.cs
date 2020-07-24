@@ -25,10 +25,20 @@ namespace PierresBakeryMVC.Tests
     public void GetName_ReturnsName_String()
     {
       string name = "Test Name";
-      Vendor newVendor = new Vendor(name, "test title");
+      Vendor newVendor = new Vendor(name, "test desc");
       string result = newVendor.Name;
 
       Assert.AreEqual(name, result);
+    }
+
+    [TestMethod]
+    public void GetDesc_ReturnsDesc_String()
+    {
+      string desc = "Test Desc";
+      Vendor newVendor = new Vendor("name", desc);
+      string result = "desc";
+
+      Assert.AreEqual(desc, result);
     }
 
     [TestMethod]
@@ -56,7 +66,7 @@ namespace PierresBakeryMVC.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsCorrectVendor_Vendor()
+    public void Find_ReturnsCorrectVendor_Vendor()
     {
       Vendor newVendor1 = new Vendor("name", "desc");
       Vendor newVendor2 = new Vendor("name", "desc");
