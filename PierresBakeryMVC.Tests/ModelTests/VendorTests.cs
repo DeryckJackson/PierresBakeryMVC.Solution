@@ -29,5 +29,16 @@ namespace PierresBakeryMVC.Tests
 
       Assert.AreEqual(name, result);
     }
+
+    public void GetId_ReturnsVendorId_Int()
+    {
+      string name = "Test Name";
+      string desc = "Test Desc";
+      Vendor newVendor = new Vendor(name, desc);
+
+      int result = newVendor.Id;
+
+      Assert.AreEqual(1, result);
+    }
   }
 }
