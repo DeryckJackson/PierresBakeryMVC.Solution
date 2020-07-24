@@ -73,5 +73,16 @@ namespace PierresBakeryMVC.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      Order newOrder1 = new Order("title1", "desc1", 5, "date");
+      Order newOrder2 = new Order("title", "desc", 5, "date");
+
+      Order result = new Order("title2", "desc2", 5, "date");;
+
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
