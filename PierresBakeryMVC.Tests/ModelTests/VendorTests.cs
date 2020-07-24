@@ -21,6 +21,7 @@ namespace PierresBakeryMVC.Tests
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
+    [TestMethod]
     public void GetName_ReturnsName_String()
     {
       string name = "Test Name";
@@ -30,6 +31,7 @@ namespace PierresBakeryMVC.Tests
       Assert.AreEqual(name, result);
     }
 
+    [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       string name = "Test Name";
@@ -38,7 +40,19 @@ namespace PierresBakeryMVC.Tests
 
       int result = newVendor.Id;
 
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(0, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      Vendor newVendor1 = new Vendor("name", "desc");
+      Vendor newVendor2 = new Vendor("name", "desc");
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
+
+      List<Vendor> result = Vendor.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
