@@ -57,7 +57,7 @@ namespace PierresBakeryMVC.Tests
     {
       Order newOrder = new Order("title", "desc", 5, "date");
 
-      int result = 1;
+      int result = newOrder.Id;
 
       Assert.AreEqual(0, result);
     }
