@@ -27,7 +27,7 @@ namespace PierresBakeryMVC.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet("vendors/{superCoolAmazingId}")]
+    [HttpGet("vendors/{id}")]
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
@@ -38,7 +38,7 @@ namespace PierresBakeryMVC.Controllers
       return View(model);
     }
 
-    [HttpPost("/vendors/{categoryId}/orders")]
+    [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string title, string desc, string price, string date)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
